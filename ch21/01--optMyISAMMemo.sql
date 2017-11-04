@@ -42,3 +42,12 @@ LOAD INDEX INTO CACHE sales1,sales2;
 ###
 SET GLOBAL key_cache_division_limit=70; -- 即30%的热表区
 SET GLOBAL hot_cache.key_cache_division_limit=70;
+
+####
+#配置文件修改读缓存和排序缓存
+###
+#默认的读缓存（各 session 独占）
+read_buffer_size=64K
+#默认的排序缓存（各 session 独占）
+read_rnd_buffer_size=256K
+
