@@ -20,3 +20,8 @@ innodb_buffer_pool_instances=8
 #查看双写状态
 #——》默认是开启的
 SHOW GLOBAL VARIABLES LIKE '%doublewrite%';
+
+
+#配置文件设置全局排序缓存和连接查询缓存
+join_buffer_size=256K
+sort_buffer_size=256K
