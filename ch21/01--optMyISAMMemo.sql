@@ -37,3 +37,8 @@ CACHE INDEX sales1 IN hot_cache;
 CACHE INDEX sales2 IN cold_cache;
 LOAD INDEX INTO CACHE sales1,sales2;
 
+####
+#启用中点插入策略
+###
+SET GLOBAL key_cache_division_limit=70; -- 即30%的热表区
+SET GLOBAL hot_cache.key_cache_division_limit=70;
